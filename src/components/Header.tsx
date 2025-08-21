@@ -42,8 +42,12 @@ const Header = () => {
             >
               <Link to="/">Dashboard</Link>
             </Button>
-            <Button variant="ghost" className="text-gray-600 hover:text-gray-900">
-              Calls JSON
+            <Button 
+              variant={isActive("/chat") ? "default" : "ghost"}
+              className={isActive("/chat") ? "" : "text-gray-600 hover:text-gray-900"}
+              asChild
+            >
+              <Link to="/chat">Chat with your calls</Link>
             </Button>
           </nav>
         </div>
