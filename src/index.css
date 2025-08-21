@@ -17,8 +17,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Analytics Dashboard Colors */
+    --primary: 198 93% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 198 93% 70%;
+    
+    --analytics-blue: 198 93% 60%;
+    --analytics-purple: 280 65% 70%;
+    --analytics-coral: 14 91% 70%;
+    --analytics-green: 142 76% 56%;
+    --analytics-orange: 36 91% 70%;
+    --analytics-red: 0 84% 70%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -34,7 +43,17 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 198 93% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--analytics-blue)), hsl(var(--primary-glow)));
+    --gradient-purple: linear-gradient(135deg, hsl(var(--analytics-purple)), hsl(280 65% 80%));
+    --gradient-coral: linear-gradient(135deg, hsl(var(--analytics-coral)), hsl(14 91% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--analytics-green)), hsl(142 76% 66%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
     --radius: 0.5rem;
 
