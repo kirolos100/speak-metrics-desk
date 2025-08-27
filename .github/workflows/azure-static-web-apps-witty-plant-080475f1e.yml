@@ -37,3 +37,4 @@ jobs:
           app_location: "src" # App source code path
           api_location: "src_back" # API source code path
           output_location: "dist" # Built app content directory
+          action: "upload" # Deployment action
