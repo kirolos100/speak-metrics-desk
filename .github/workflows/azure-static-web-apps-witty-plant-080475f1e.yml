@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          persist-credentials: false # Prevents setting credential helpers
           submodules: true
           lfs: false
       - name: Set up Node.js
