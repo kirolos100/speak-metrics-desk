@@ -38,3 +38,4 @@ jobs:
           app_location: "."
           output_location: "dist"
           api_location: ""
+          deployment_action: "upload"
