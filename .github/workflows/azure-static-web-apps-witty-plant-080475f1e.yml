@@ -19,18 +19,22 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
-      # Python setup and pip install steps removed as requested
-      - name: Build and Deploy
-        id: builddeploy
+          node-version: '20' # or your preferred version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          app_location: ""                  # repo root, not "src"
-          output_location: "dist"           # built files go here
+          app_location: "."
+          output_location: "dist"
           api_location: ""
-          action: "upload"
-          skip_deploy_on_missing_secrets: true
-
-
