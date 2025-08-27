@@ -11,13 +11,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">L</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-semibold text-gray-900">Link</h1>
-              <p className="text-xs text-gray-500">Development</p>
-            </div>
+            <img src="/logo.png" alt="Logo" className="w-20 h-20 object-contain" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -33,7 +27,7 @@ const Header = () => {
               className={isActive("/upload") ? "" : "text-gray-600 hover:text-gray-900"}
               asChild
             >
-              <Link to="/upload">Upload Records</Link>
+              <Link to="/upload">Upload Calls</Link>
             </Button>
             <Button 
               variant={isActive("/") ? "default" : "ghost"}
@@ -43,11 +37,18 @@ const Header = () => {
               <Link to="/">Dashboard</Link>
             </Button>
             <Button 
-              variant={isActive("/chat") ? "default" : "ghost"}
+              variant={isActive("/chat") ? "default" : "ghost"} 
               className={isActive("/chat") ? "" : "text-gray-600 hover:text-gray-900"}
               asChild
             >
-              <Link to="/chat">Chat with your calls</Link>
+              <Link to="/chat">Chat with Calls</Link>
+            </Button>
+            <Button 
+              variant={isActive("/insights") ? "default" : "ghost"} 
+              className={isActive("/insights") ? "" : "text-gray-600 hover:text-gray-900"}
+              asChild
+            >
+              <Link to="/insights">AI Insights</Link>
             </Button>
           </nav>
         </div>

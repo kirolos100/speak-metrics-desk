@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 
 interface PieChartData {
   name: string;
@@ -13,6 +13,7 @@ interface PieChartComponentProps {
 }
 
 const PieChartComponent = ({ title, data }: PieChartComponentProps) => {
+  const total = data.reduce((sum, d) => sum + (Number(d.value) || 0), 0);
   return (
     <Card className="shadow-card">
       <CardHeader>
@@ -34,6 +35,13 @@ const PieChartComponent = ({ title, data }: PieChartComponentProps) => {
                 <Cell key={`cell-${index}`} fill={entry.color} />
               ))}
             </Pie>
+            <Tooltip
+              formatter={(value: any, name: any) => {
+                const v = Number(value) || 0;
+                const pct = total ? ((v / total) * 100).toFixed(1) : "0.0";
+                return [`${v} (${pct}%)`, name];
+              }}
+            />
             <Legend 
               verticalAlign="bottom" 
               height={36}
