@@ -35,6 +35,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           app_location: "src" # App source code path
-          api_location: "src_back" # API source code path
+          api_location: ""
           output_location: "dist" # Built app content directory
           action: "upload" # Deployment action
+
