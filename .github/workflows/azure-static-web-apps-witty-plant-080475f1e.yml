@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
-      # REMOVE Python setup and pip install steps!
+      # Python setup and pip install steps removed as requested
       - name: Build and Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
