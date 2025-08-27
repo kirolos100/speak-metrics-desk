@@ -21,14 +21,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.8'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install --target ./app --requirement src_back/requirements.txt
+      # REMOVE Python setup and pip install steps!
       - name: Build and Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -38,4 +31,3 @@ jobs:
           api_location: ""
           output_location: "dist" # Built app content directory
           action: "upload" # Deployment action
-
