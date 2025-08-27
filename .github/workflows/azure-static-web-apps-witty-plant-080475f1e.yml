@@ -28,8 +28,9 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           app_location: ""                  # repo root, not "src"
-          output_location: ""           # built files go here
+          output_location: "dist"           # built files go here
           api_location: ""
           action: "upload"
           skip_deploy_on_missing_secrets: true
+
 
