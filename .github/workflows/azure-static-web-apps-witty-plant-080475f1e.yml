@@ -41,7 +41,8 @@ jobs:
           api_location: ""
           action: "upload"
           skip_deploy_on_missing_secrets: true
-          AZURE_STATIC_WEB_APPS_DEPLOYMENT_TOKEN: e4f0f69581df6686e31ca4e2c4be6a6576aef0a65bf14ed4fc6fa66b509d136501-be8c8340-482d-405f-8e08-fcdef92fef7d01e2927080475f1e
+          deployment_token: e4f0f69581df6686e31ca4e2c4be6a6576aef0a65bf14ed4fc6fa66b509d136501-be8c8340-482d-405f-8e08-fcdef92fef7d01e2927080475f1e
+
 
 
 
